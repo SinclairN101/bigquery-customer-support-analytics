@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_customer_support
+    database: nathan-analytics-engineering
+    schema: raw_customer_support
+
+    tables:
+      - name: tickets
+        description: Raw customer support ticket data loaded from Kaggle.

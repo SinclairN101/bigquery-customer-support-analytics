@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: stg_tickets
+    description: >
+      Staging model containing cleaned customer support ticket data.
+      One row per support ticket.
+
+    columns:
+
+      - name: ticket_id
+        description: Unique identifier for the support ticket.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: Full name of the customer associated with the support ticket.
+
+      - name: customer_email
+        description: Customer email address associated with the support ticket.
+
+      - name: customer_age
+        description: Age of the customer associated with the support ticket.
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 18
+                max_value: 100
+                strictly: false
+
+      - name: customer_gender
+        description: Gender of the customer associated with the support ticket.
+
+      - name: product_purchased
+        description: Product or service associated with the support request.
+
+      - name: purchase_date
+        description: Date the product or service was originally purchased.
+
+      - name: ticket_type
+        description: Classification of the support request type.
+
+      - name: ticket_subject
+        description: Short summary describing the support issue.
+
+      - name: ticket_description
+        description: Detailed explanation of the customer support issue.
+
+      - name: ticket_status
+        description: Current status of the support ticket.
+
+      - name: resolution
+        description: Resolution notes or outcome for the support ticket.
+
+      - name: ticket_priority
+        description: Priority level assigned to the support ticket.
+
+      - name: ticket_channel
+        description: Communication channel used to submit the support ticket.
+
+      - name: first_response_time_est
+        description: Timestamp representing the first customer support response in EST.
+
+      - name: time_to_resolution_est
+        description: Timestamp representing when the support ticket was resolved in EST.
+
+      - name: customer_satisfaction_rating
+        description: Customer satisfaction score submitted after ticket resolution.
