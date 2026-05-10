@@ -10,10 +10,10 @@ customer_ticket_summary as (
     select
 
         -- Dimensions
-        customer_name,
         customer_email,
-        customer_age,
-        customer_gender,
+        any_value(customer_name) as customer_name,
+        any_value(customer_age) as customer_age,
+        any_value(customer_gender) as customer_gender,
 
         -- Measures
         count(ticket_id) as total_tickets,
@@ -26,7 +26,7 @@ customer_ticket_summary as (
         max(purchase_date) as latest_ticket_date
 
     from tickets
-    group by 1,2,3,4
+    group by 1
 
 )
 
