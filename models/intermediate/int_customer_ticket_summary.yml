@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: int_customer_ticket_summary
+    description: >
+      Intermediate model summarizing customer-level support ticket activity.
+      One row per customer.
+
+    columns:
+
+      - name: customer_email
+        description: "{{ doc('customer_email') }}"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: "{{ doc('customer_name') }}"
+
+      - name: customer_age
+        description: "{{ doc('customer_age') }}"
+
+      - name: customer_gender
+        description: "{{ doc('customer_gender') }}"
+
+      - name: total_tickets
+        description: "{{ doc('total_tickets') }}"
+
+      - name: open_tickets
+        description: "{{ doc('open_tickets') }}"
+
+      - name: closed_tickets
+        description: "{{ doc('closed_tickets') }}"
+
+      - name: avg_customer_satisfaction_rating
+        description: "{{ doc('avg_customer_satisfaction_rating') }}"
+
+      - name: first_ticket_date
+        description: "{{ doc('first_ticket_date') }}"
+
+      - name: latest_ticket_date
+        description: "{{ doc('latest_ticket_date') }}"

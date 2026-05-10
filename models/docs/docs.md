@@ -122,6 +122,19 @@ Timestamp representing when the support ticket was resolved converted to Eastern
 {% enddocs %}
 
 
+{% docs first_ticket_date %}
+
+Earliest recorded support ticket purchase date associated with the customer.
+
+{% enddocs %}
+
+
+{% docs latest_ticket_date %}
+
+Most recent recorded support ticket purchase date associated with the customer.
+
+{% enddocs %}
+
 ================
 Measures
 ================
@@ -129,5 +142,32 @@ Measures
 {% docs customer_satisfaction_rating %}
 
 Customer satisfaction score submitted after ticket resolution.
+
+{% enddocs %}
+
+{% docs total_tickets %}
+
+Total number of support tickets submitted by the customer.
+
+{% enddocs %}
+
+
+{% docs open_tickets %}
+
+Total number of customer support tickets currently in an open status.
+
+{% enddocs %}
+
+
+{% docs closed_tickets %}
+
+Total number of customer support tickets successfully closed.
+
+{% enddocs %}
+
+
+{% docs avg_customer_satisfaction_rating %}
+
+Average customer satisfaction rating across all customer support tickets.
 
 {% enddocs %}
