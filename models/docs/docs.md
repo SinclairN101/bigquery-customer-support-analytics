@@ -9,6 +9,14 @@ Unique identifier for the customer support ticket.
 {% enddocs %}
 
 
+{% docs customer_key %}
+
+System-generated surrogate key used to uniquely identify a customer within the dim model. 
+Generated from the customer email address and will be used for joining dimension and fact tables.
+
+{% enddocs %}
+
+
 ================
 Dimensions
 ================
