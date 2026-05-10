@@ -1,6 +1,6 @@
 {% macro generate_schema_name(custom_schema_name, node) %}
 
-    {% if env_var('DBT_CLOUD_ENVIRONMENT_NAME', 'dev') == 'prod' %}
+    {% if target.name == 'default' %}
 
         {{ custom_schema_name | upper }}
 
