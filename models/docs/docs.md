@@ -17,6 +17,13 @@ Generated from the customer email address and will be used for joining dimension
 {% enddocs %}
 
 
+{% docs ticket_key %}
+
+System-generated surrogate key used to uniquely identify a customer support ticket record within the fact table.
+
+{% enddocs %}
+
+
 ================
 Dimensions
 ================
@@ -177,5 +184,16 @@ Total number of customer support tickets successfully closed.
 {% docs avg_customer_satisfaction_rating %}
 
 Average customer satisfaction rating across all customer support tickets.
+
+{% enddocs %}
+
+
+================
+Metadata
+================
+
+{% docs warehouse_loaded_at %}
+
+Timestamp indicating when the record was loaded into the warehouse by dbt.
 
 {% enddocs %}
