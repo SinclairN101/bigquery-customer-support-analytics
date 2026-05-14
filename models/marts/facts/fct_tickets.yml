@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: fct_tickets
+    description: >
+      Fact table containing one row per customer support ticket event.
+
+    columns:
+
+      - name: ticket_key
+        description: "{{ doc('ticket_key') }}"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_key
+        description: "{{ doc('customer_key') }}"
+        data_tests:
+          - not_null
+
+      - name: ticket_id
+        description: "{{ doc('ticket_id') }}"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: ticket_type
+        description: "{{ doc('ticket_type') }}"
+
+      - name: ticket_subject
+        description: "{{ doc('ticket_subject') }}"
+
+      - name: ticket_status
+        description: "{{ doc('ticket_status') }}"
+
+      - name: ticket_priority
+        description: "{{ doc('ticket_priority') }}"
+
+      - name: ticket_channel
+        description: "{{ doc('ticket_channel') }}"
+
+      - name: product_purchased
+        description: "{{ doc('product_purchased') }}"
+
+      - name: resolution
+        description: "{{ doc('resolution') }}"
+
+      - name: customer_satisfaction_rating
+        description: "{{ doc('customer_satisfaction_rating') }}"
+
+      - name: first_response_time_est
+        description: "{{ doc('first_response_time_est') }}"
+
+      - name: time_to_resolution_est
+        description: "{{ doc('time_to_resolution_est') }}"
+
+      - name: purchase_date
+        description: "{{ doc('purchase_date') }}"
+
+      - name: warehouse_loaded_at
+        description: "{{ doc('warehouse_loaded_at') }}"
