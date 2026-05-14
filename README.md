@@ -11,7 +11,6 @@ This project demonstrates a modern analytics engineering workflow including:
 * production deployments
 * dashboard reporting
 
----
 
 # Project Architecture
 
@@ -19,7 +18,7 @@ This project demonstrates a modern analytics engineering workflow including:
 RAW → STAGING → INTERMEDIATE → DIMENSIONS / FACTS → LOOKER STUDIO
 ```
 
----
+
 
 # Tech Stack
 
@@ -32,7 +31,7 @@ RAW → STAGING → INTERMEDIATE → DIMENSIONS / FACTS → LOOKER STUDIO
 | Looker Studio | Dashboard & reporting           |
 | SQL           | Data transformation language    |
 
----
+
 
 # Data Modeling
 
@@ -51,7 +50,7 @@ DIM_Customer.customer_key
 FCT_Tickets.customer_key
 ```
 
----
+
 
 # dbt Features Used
 
@@ -65,7 +64,7 @@ FCT_Tickets.customer_key
 * tags
 * persist_docs
 
----
+
 
 # Dashboard
 
@@ -83,7 +82,7 @@ Live Dashboard:
 
 [Customer Support Performance Dashboard](https://datastudio.google.com/reporting/0dd558c1-5e22-4a94-9223-459b955ebb61?utm_source=chatgpt.com)
 
----
+
 
 # Example KPIs
 
@@ -94,7 +93,7 @@ Live Dashboard:
 * Average Resolution Time
 * Customer Satisfaction Score
 
----
+
 
 # Example Charts
 
@@ -104,7 +103,7 @@ Live Dashboard:
 * Average Satisfaction by Ticket Type
 * Top Customers by Ticket Volume
 
----
+
 
 # Development Workflow
 
@@ -119,7 +118,7 @@ Live Dashboard:
 8. Surface in Looker Studio
 ```
 
----
+
 
 # Future Improvements as I learn
 
@@ -131,7 +130,6 @@ Live Dashboard:
 * semantic layer enhancements
 * partitioned incremental facts
 
----
 
 # Author
 
